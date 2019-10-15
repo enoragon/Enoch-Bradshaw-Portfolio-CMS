@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 
 import { Container, Row, Col, Image } from 'react-bootstrap'
 import Blurbs from '../components/Blurbs/Blurbs'

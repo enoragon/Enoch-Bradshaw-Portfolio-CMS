@@ -65,7 +65,7 @@ class Home extends Component{
                         </Row>
                     </div>
                     <LongCard isImageOnLeft={true} image={CompanyPhoto} title={'Our Values'}>
-                        Our work we take very seriously and we pour our hearts into our projects. 
+                        We take our work very seriously and we pour our hearts into our projects. 
                         As you may have noticed, we do not take ourselves very seriously.
                         We like to laugh and crack jokes but what is most important to us is making cool shit.
                         We think of ourselves as painters on the canvas of life trying, through each creation, to leave our mark on society; 

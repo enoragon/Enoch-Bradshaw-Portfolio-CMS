@@ -19,19 +19,19 @@ const Footer = ({ className }) => (
                 </Nav>
             </Row>
             <Row className="justify-content-md-center py-5">
-                <Icon size="4em" className="mx-3" href="mailto:enochbradshaw@gmail.com">
+                <Icon size="4em" className="mx-2" href="mailto:enochbradshaw@gmail.com">
                     <MdEmail />
                 </Icon>
-                <Icon size="4em" className="mx-3" href="https://twitter.com/bradshaw_enoch">
+                <Icon size="4em" className="mx-2" href="https://twitter.com/bradshaw_enoch">
                     <FaTwitter />
                 </Icon>
-                <Icon size="4em" className="mx-3" href="https://www.instagram.com/nuckybradshaw">
+                <Icon size="4em" className="mx-2" href="https://www.instagram.com/nuckybradshaw">
                     <FaInstagram />
                 </Icon>
-                <Icon size="4em" className="mx-3" href="https://www.linkedin.com/in/enochbradshaw">
+                <Icon size="4em" className="mx-2" href="https://www.linkedin.com/in/enochbradshaw">
                     <FaLinkedinIn />
                 </Icon>
-                <Icon size="4em" className="mx-3" href="https://github.com/enoragon">
+                <Icon size="4em" className="mx-2" href="https://github.com/enoragon">
                     <FaGithub />
                 </Icon>
             </Row>

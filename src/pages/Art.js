@@ -4,33 +4,50 @@ import Layout from '../components/layout'
 import SEO from "../components/seo"
 
 class Art extends Component{
+
+    createImages = () => {
+        const data = this.props.data.allFile.edges
+        let imgs = [];
+        for (let i = 0; i < data.length; i++) {
+            const content = data[i].node.childMarkdownRemark.frontmatter;
+            imgs.push(<Image src={content.image} style={{ maxWidth:"500px",margin:"20px" }}/>);
+        }
+        return imgs;
+    }
+
     render(){
         return (
             <Layout>
                 <SEO title="Art" />
-                <Container>
+                {/* <Container> */}
                     <div className="mx-auto">
-                        <h1  className="text-center">Coming Soon</h1>
+                        <h1  className="text-center">Gallery</h1>
                     </div>
-                    {/* <div className="d-flex flex-wrap">
-                    
-                        <Image src="https://via.placeholder.com/200"/>
-                    
-                        <Image src="https://via.placeholder.com/200"/>
-                    
-                        <Image src="https://www.instagram.com/p/B1eumkWnvOD"/>
-                    
-                        <Image src="https://photos.app.goo.gl/Y6CoZz64Wo35AHQe8"/>
-                    
-                        <Image src="https://photos.app.goo.gl/Y6CoZz64Wo35AHQe8"/>
-                    
-                        <Image src="https://photos.app.goo.gl/yzL4eoNUZxpZryTJA"/>
 
-                    </div> */}
-                </Container>
+                    <div className="d-flex flex-wrap justify-content-center">
+                        {this.createImages()}
+                    </div>
+
+                {/* </Container> */}
             </Layout>
         );
     }
 }
 
 export default Art;
+
+export const query = graphql`
+  query {
+    allFile(filter: {sourceInstanceName: {eq: "content"}, relativeDirectory: {eq: "art"}}) {
+      edges {
+        node {
+          childMarkdownRemark {
+            frontmatter {
+              title
+              image
+          }
+        }
+      }
+    }
+  }
+}`
