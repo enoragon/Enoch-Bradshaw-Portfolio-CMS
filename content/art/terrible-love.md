@@ -1,5 +1,5 @@
 ---
 title: Terrible Love
-artimage: /assets/img_20190822_134149925.jpg
+image: /assets/img_20190822_134223722.jpg
 ---
 
