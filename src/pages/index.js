@@ -3,7 +3,7 @@ import React from "react"
 
 import { Container, Row, Col, Image } from 'react-bootstrap'
 import Blurbs from '../components/Blurbs/Blurbs'
-import Nucky from '../Images/nucky.png'
+import Nucky from '../images/nucky.png'
 
 import Layout from "../components/layout"
 // import Image from "../components/image"
