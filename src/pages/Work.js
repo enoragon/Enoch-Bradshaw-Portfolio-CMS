@@ -3,11 +3,7 @@ import { Container } from 'react-bootstrap';
 import ReactMarkdown from 'react-markdown';
 import htmlParser from 'react-markdown/plugins/html-parser';
 import LongCard from '../components/LongCard/LongCard';
-import NoodRoom from '../Images/noodroom.gif';
-// import Mobile from '../Images/Mobile.png';
-// import AR from '../Images/ARPhone.jpg';
-// import Emotes from '../Images/Emotes.png';
-// import LilacCruise from '../Images/lilaccruise.gif';
+import NoodRoom from '../images/noodroom.gif';
 import Layout from '../components/layout'
 import SEO from "../components/seo"
 import { graphql } from "gatsby"

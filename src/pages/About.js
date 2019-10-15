@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { Container, Row, Col, Image } from 'react-bootstrap';
 import LongCard from '../components/LongCard/LongCard';
-import Noodle from '../Images/smallnood.png';
-import Human from '../Images/lizard.png';
-import Coder from '../Images/Coder.png';
-import Gamer from '../Images/Gamer.png';
-import Artist from '../Images/Artist.png';
-import CompanyPhoto from '../Images/CompanyPhoto.png';
+import Noodle from '../images/smallnood.png';
+import Human from '../images/lizard.png';
+import Coder from '../images/Coder.png';
+import Gamer from '../images/Gamer.png';
+import Artist from '../images/Artist.png';
+import CompanyPhoto from '../images/CompanyPhoto.png';
 import Layout from '../components/layout';
 import SEO from "../components/seo"
 
