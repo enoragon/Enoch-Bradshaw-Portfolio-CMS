@@ -9,7 +9,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Header from './Header';
+import Header from './Header/Header';
 import Footer from './Footer/Footer';
 import 'bootstrap/dist/css/bootstrap.css';
 // import "../../node_modules/bootstrap/dist/css/bootstrap.css";
