@@ -1,12 +1,13 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 import  { longcardRow } from './LongCard.module.css';
+import Img from "gatsby-image";
 
 
 
-const Img = ({ image }) => (
+const ImgCol = ({ image }) => (
     <Col md="6" xl="4">
-        <img src={image}  style={{maxWidth: "350px"}}/>
+        <Img fluid={image.childImageSharp.fluid}  style={{maxWidth: "350px"}}/>
     </Col>
 );
 
@@ -21,13 +22,13 @@ const LongCard = ({ children, isImageOnLeft, image, title }) => (
     <Row className={longcardRow}>
         {isImageOnLeft ? (
             <>
-                <Img image={image} />
+                <ImgCol image={image} />
                 <CardText title={title}>{ children }</CardText>
             </>
         ) : (
             <>
                 <CardText title={title}>{ children }</CardText>
-                <Img image={image} />
+                <ImgCol image={image} />
             </>
         )}
     </Row>

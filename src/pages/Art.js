@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
-import { Container, Image } from 'react-bootstrap';
+import Img from "gatsby-image";
 import Layout from '../components/layout'
 import SEO from "../components/seo"
+import { graphql } from "gatsby"
 
 class Art extends Component{
 
     createImages = () => {
         const data = this.props.data.allFile.edges
+        console.log(data);
         let imgs = [];
         for (let i = 0; i < data.length; i++) {
-            const content = data[i].node.childMarkdownRemark.frontmatter;
-            imgs.push(<Image src={content.image} style={{ maxWidth:"500px",margin:"20px" }}/>);
+          const content = data[i].node.childMarkdownRemark.frontmatter;
+          imgs.push(<Img fluid={content.image.childImageSharp.fluid} key={content.image.childImageSharp.id} style={{ width:"500px",margin:"20px" }}/>);
         }
         return imgs;
     }
@@ -44,10 +46,17 @@ export const query = graphql`
           childMarkdownRemark {
             frontmatter {
               title
-              image
+              image{
+                childImageSharp {
+                  fluid {
+                    ...GatsbyImageSharpFluid
+                  }
+                  id
+                }
+              }
+            }
           }
         }
       }
     }
-  }
-}`
+  }`

@@ -1,3 +1,10 @@
+var netlifyCmsPaths = {
+  resolve: `gatsby-plugin-netlify-cms-paths`,
+  options: {
+    cmsConfig: `/static/admin/config.yml`,
+  },
+}
+
 module.exports = {
   siteMetadata: {
     title: `Enoch Bradshaw`,
@@ -13,17 +20,33 @@ module.exports = {
         path: `${__dirname}/content`,
       },
     },
-    `gatsby-transformer-remark`,
-    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/static`,
       },
     },
+    netlifyCmsPaths,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          netlifyCmsPaths,
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 650,
+              backgroundColor: 'transparent',
+            }, 
+          },
+        ],
+      },
+    },
+
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -33,7 +56,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/nucky.png`, // This path is relative to the root of the site.
+        icon: `static/assets/nucky.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

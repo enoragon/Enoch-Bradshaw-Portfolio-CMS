@@ -1,17 +1,20 @@
 import React, { Component } from 'react';
-import { Container, Row, Col, Image } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import LongCard from '../components/LongCard/LongCard';
-import Noodle from '../images/smallnood.png';
-import Human from '../images/lizard.png';
-import Coder from '../images/Coder.png';
-import Gamer from '../images/Gamer.png';
-import Artist from '../images/Artist.png';
-import CompanyPhoto from '../images/CompanyPhoto.png';
+// import CompanyPhoto from '../images/CompanyPhoto.png';
 import Layout from '../components/layout';
-import SEO from "../components/seo"
+import SEO from "../components/seo";
+import Img from "gatsby-image";
+import { useStaticQuery, graphql } from "gatsby";
 
 class Home extends Component{
     render(){
+        console.log(this.props.data);
+        let noodle = this.props.data.noodle.childImageSharp.fluid;
+        let human = this.props.data.human.childImageSharp.fluid;
+        let coder = this.props.data.coder.childImageSharp.fluid;
+        let artist = this.props.data.artist.childImageSharp.fluid;
+        let gamer = this.props.data.gamer.childImageSharp.fluid;
         return (
             <Layout>
                 <SEO title="About" />
@@ -21,7 +24,7 @@ class Home extends Component{
                         <Row>
                             <Col md="4" className="offset-md-2">
                                 <Row className="d-flex justify-content-center">
-                                    <Image src={Noodle} roundedCircle style={{maxWidth: "200px"}}/>
+                                    <Img fluid={noodle} style={{borderRadius: "50%", width: "200px", height: "200px"}}/>
                                 </Row>
                                 <Row className="d-flex justify-content-center">
                                     <p>Noodle Expert</p>
@@ -29,7 +32,7 @@ class Home extends Component{
                             </Col>
                             <Col md="4">
                                 <Row className="d-flex justify-content-center">
-                                    <Image src={Human} roundedCircle style={{maxWidth: "200px"}}/>
+                                    <Img fluid={human} style={{borderRadius: "50%", width: "200px", height: "200px"}}/>
                                 </Row>
                                 <Row className="d-flex justify-content-center">
                                     <p>Human</p>
@@ -40,7 +43,7 @@ class Home extends Component{
                         <Row>
                             <Col md="4">
                                 <Row className="d-flex justify-content-center">
-                                    <Image src={Coder} roundedCircle style={{maxWidth: "200px"}}/>
+                                    <Img fluid={coder} style={{borderRadius: "50%", width: "200px", height: "200px"}}/>
                                 </Row>
                                 <Row className="d-flex justify-content-center">
                                     <p>Developer</p>
@@ -48,7 +51,7 @@ class Home extends Component{
                             </Col>
                             <Col md="4">
                                 <Row className="d-flex justify-content-center">
-                                    <Image src={Artist} roundedCircle style={{maxWidth: "200px"}}/>
+                                    <Img fluid={artist} style={{borderRadius: "50%", width: "200px", height: "200px"}}/>
                                 </Row>
                                 <Row className="d-flex justify-content-center">
                                     <p>Artist</p>
@@ -56,7 +59,7 @@ class Home extends Component{
                             </Col>
                             <Col md="4">
                                 <Row className="d-flex justify-content-center">
-                                    <Image src={Gamer} roundedCircle style={{maxHeight: "200px", maxWidth: "200px"}}/>
+                                    <Img fluid={gamer} style={{borderRadius: "50%", width: "200px", height: "200px"}}/>
                                 </Row>
                                 <Row className="d-flex justify-content-center">
                                     <p>Game Designer</p>
@@ -64,13 +67,13 @@ class Home extends Component{
                             </Col>
                         </Row>
                     </div>
-                    <LongCard isImageOnLeft={true} image={CompanyPhoto} title={'Our Values'}>
+                    {/* <LongCard isImageOnLeft={true} image={CompanyPhoto} title={'Our Values'}>
                         We take our work very seriously and we pour our hearts into our projects. 
                         As you may have noticed, we do not take ourselves very seriously.
                         We like to laugh and crack jokes but what is most important to us is making cool shit.
                         We think of ourselves as painters on the canvas of life trying, through each creation, to leave our mark on society; 
                         to be immortalized as a single stroke in a collage of color.
-                    </LongCard>
+                    </LongCard> */}
                 </Container>
             </Layout>
         );
@@ -78,3 +81,47 @@ class Home extends Component{
 }
 
 export default Home;
+
+export const query = graphql`
+            query {
+                noodle: file(relativePath: { eq: "assets/smallnood.png" }) {
+                    childImageSharp {
+                        fluid{
+                            ...GatsbyImageSharpFluid
+                        }
+                    }
+                }
+                human: file(relativePath: { eq: "assets/lizard.png" }) {
+                    childImageSharp {
+                        fluid{
+                            ...GatsbyImageSharpFluid
+                        }
+                    }
+                }
+                coder: file(relativePath: { eq: "assets/coder.png" }) {
+                    childImageSharp {
+                        fluid{
+                            ...GatsbyImageSharpFluid
+                        }
+                    }
+                }
+                gamer: file(relativePath: { eq: "assets/gamer.png" }) {
+                    childImageSharp {
+                        fluid{
+                            ...GatsbyImageSharpFluid
+                        }
+                    }
+                }
+                artist: file(relativePath: { eq: "assets/artist.png" }) {
+                    childImageSharp {
+                        fluid{
+                            ...GatsbyImageSharpFluid
+                        }
+                    }
+                }
+            }
+        `
+
+                
+              
+                
