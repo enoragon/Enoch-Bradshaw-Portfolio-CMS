@@ -1,5 +1,5 @@
 ---
-image: /assets/lilaccruise.gif
+image: /assets/lizard.png
 title: Concert Visuals
 text: >-
   The fine folks in Lilac Cruise, a local band, asked my to create Visuals for
