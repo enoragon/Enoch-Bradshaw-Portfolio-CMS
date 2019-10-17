@@ -15,6 +15,7 @@ class Home extends Component{
         let coder = this.props.data.coder.childImageSharp.fluid;
         let artist = this.props.data.artist.childImageSharp.fluid;
         let gamer = this.props.data.gamer.childImageSharp.fluid;
+        let company = this.props.data.company;
         return (
             <Layout>
                 <SEO title="About" />
@@ -67,13 +68,13 @@ class Home extends Component{
                             </Col>
                         </Row>
                     </div>
-                    {/* <LongCard isImageOnLeft={true} image={CompanyPhoto} title={'Our Values'}>
+                    <LongCard isImageOnLeft={true} image={company} title={'Our Values'}>
                         We take our work very seriously and we pour our hearts into our projects. 
                         As you may have noticed, we do not take ourselves very seriously.
                         We like to laugh and crack jokes but what is most important to us is making cool shit.
                         We think of ourselves as painters on the canvas of life trying, through each creation, to leave our mark on society; 
                         to be immortalized as a single stroke in a collage of color.
-                    </LongCard> */}
+                    </LongCard>
                 </Container>
             </Layout>
         );
@@ -113,6 +114,13 @@ export const query = graphql`
                     }
                 }
                 artist: file(relativePath: { eq: "assets/artist.png" }) {
+                    childImageSharp {
+                        fluid{
+                            ...GatsbyImageSharpFluid
+                        }
+                    }
+                }
+                company: file(relativePath: { eq: "assets/companyphoto.png" }) {
                     childImageSharp {
                         fluid{
                             ...GatsbyImageSharpFluid
