@@ -55,7 +55,7 @@ const IndexPage = () => {
             <Blurbs blurbTitle="I would make the title 'Artsy Fartsy' but I don't want 'Fart' in the title so...">
                 One of my favorite things to do is draw with pen. It's a lot like life; 
                 if you f*** it up you have to figure out how to make it right. 
-                I find that beautiful. Another fun excersize I do is markerboard art. 
+                I find that beautiful. Another fun exercise I do is markerboard art. 
                 Knowing that whatever I draw will get erased by the end of the day is liberating.
                 Because every stroke is expendable, touching the marker to the board is met with no mental resistance.<br/><br/>
                 I love painting. I paint with mostly acrylic but I would like to get better with watercolor. 
