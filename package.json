@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "enoch-bradshaw",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "This nerd thinks he's hot shit because he's got a website",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Enoch Bradshaw",
   "dependencies": {
     "bootstrap": "^4.3.1",
     "gatsby": "^2.15.14",

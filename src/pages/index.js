@@ -50,12 +50,12 @@ const IndexPage = () => {
                 I like using React JS as well but I much rather the back-end. My favorite language is probably C# and for that 
                 reason I am a huge fan of the Dotnet stack. <br/><br/>
                 In my free time I like to make games and participate in game jams. I've been working for a while on a pixelated
-                sidescroller called Good Knight Evil Robots. I plan to release it within the year so keep your eye out for it!
+                side-scroller called Good Knight Evil Robots. I plan to release it within the year so keep your eye out for it!
             </Blurbs>
             <Blurbs blurbTitle="I would make the title 'Artsy Fartsy' but I don't want 'Fart' in the title so...">
                 One of my favorite things to do is draw with pen. It's a lot like life; 
                 if you f*** it up you have to figure out how to make it right. 
-                I find that beautiful. Another fun exercise I do is markerboard art. 
+                I find that beautiful. Another fun exercise I do is marker-board art. 
                 Knowing that whatever I draw will get erased by the end of the day is liberating.
                 Because every stroke is expendable, touching the marker to the board is met with no mental resistance.<br/><br/>
                 I love painting. I paint with mostly acrylic but I would like to get better with watercolor. 
