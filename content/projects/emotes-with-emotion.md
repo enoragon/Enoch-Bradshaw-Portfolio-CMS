@@ -7,5 +7,6 @@ text: >-
   for her Twitch channel and I agreed. I tried my best to capture her essence
   with these small pieces of art. I don't know for sure if I succeeded in this
   but she liked them so I am happy.
+date: 2019-12-14T04:32:46.148Z
 ---
 
