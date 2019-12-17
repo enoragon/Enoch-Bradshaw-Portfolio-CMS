@@ -12,7 +12,7 @@ collections:
       - { name: image, label: Image, widget: image }
       - { name: title, label: Title }
       - { name: text, label: Text, widget: markdown }
-      - { name: date, label: TimeStamp, widget: date }
+      - { name: date, label: TimeStamp, widget: date, format: 'MM-DD-YYYY' }
   - name: art
     label: Art
     folder: content/art
@@ -20,4 +20,4 @@ collections:
     fields:
       - { name: title, label: Title }
       - { name: image, label: Image, widget: image }
-      - { name: date, label: TimeStamp, widget: date }
+      - { name: date, label: TimeStamp, widget: date, format: 'MM-DD-YYYY'}
