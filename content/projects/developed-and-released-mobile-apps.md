@@ -7,6 +7,6 @@ text: >-
   Google Play Store. Let me tell ya, releasing mobile apps can be a humbling
   experience. There can be some back and forth and things can go wrong, but all
   in all it's a great learning experience.
-date: 03-11-2020
+date: 05-29-2020
 ---
 
