@@ -57,11 +57,12 @@ export default Work;
 
 export const query = graphql`
   query {
-    allFile(filter: {sourceInstanceName: {eq: "content"}, relativeDirectory: {eq: "projects"}}, sort: {fields: childMarkdownRemark___frontmatter___date, order: DESC}) {
+    allFile(filter: {sourceInstanceName: {eq: "content"}, relativeDirectory: {eq: "projects"}}, sort: {fields: childMarkdownRemark___frontmatter___date, order: ASC}) {
         edges {
             node {
                 childMarkdownRemark {
                     frontmatter {
+                        date
                         title
                         image {
                             childImageSharp {
